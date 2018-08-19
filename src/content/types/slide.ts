@@ -1,7 +1,14 @@
-type BulletList = string[];
+export type BulletList = string[];
 
-export default interface Slide {
+type SlideType = 'title';
+
+export interface Slide {
   title: string;
+  type?: SlideType;
   subtitle?: string;
-  content?: BulletList;
+  content?: string;
+  bullets?: BulletList;
+  gistIds?: string[];
 }
+
+export default Slide;
