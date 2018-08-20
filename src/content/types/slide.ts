@@ -9,6 +9,7 @@ export interface Slide {
   content?: string;
   bullets?: BulletList;
   gistIds?: string[];
+  img?: string;
 }
 
 export default Slide;

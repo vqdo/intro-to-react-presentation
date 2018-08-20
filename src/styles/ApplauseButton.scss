@@ -1,0 +1,21 @@
+.applause-button {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  position: absolute;
+    top: 50%;
+    left: 0;
+  transform: translate(-100%, -50%);
+  padding-right: 1em;
+  > button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    font-size: 3em;
+    opacity: 0.6;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

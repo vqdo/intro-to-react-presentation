@@ -8,7 +8,8 @@
     "paths": {
         "@assets/*": ["assets/*"],
         "@components/*": ["components/*"],
-        "@content/*": ["content/*"]
+        "@content/*": ["content/*"],
+        "@store/*": ["store/*"]
     },
     "sourceMap": true,
     "allowJs": true,

@@ -10,9 +10,10 @@ import '@styles/App.scss';
 const history = createBrowserHistory();
 
 const SlideRoute = (props: RouteComponentProps) => {
-  const content = Presentation.slides[props.match.params.id];
+  const id = props.match.params.id;
+  const content = Presentation.slides[id];
   return (
-    <SlidePage {...props} {...content} />
+    <SlidePage {...props} {...content} id={id} />
   );
 };
 
