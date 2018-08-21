@@ -16,6 +16,8 @@ $yellow: #ffdd00;
   .image-frame {
     padding: 1em 0;
     img {
+      box-sizing: border-box;
+      border: 1.5em solid rgba(0,0,0,0.2);
       width: 100%;
     }
   }

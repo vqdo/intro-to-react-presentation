@@ -1,5 +1,8 @@
+// 👏
+
 import Slide from '@content/types/slide';
 const ReactDiagramImg = require('@assets/img/react-diagram.png');
+const ApplauseWidgetDiagram = require('@assets/img/applause-widget.png');
 
 interface PresentationProps {
   title: string;
@@ -74,22 +77,47 @@ const Presentation: PresentationProps = {
         '<strong>Props</strong> are the intrinsic attributes of a component. They should NOT change.',
         `A component's props are defined by their parents.`,
         `<strong>State</strong> is the aggregate of all the <em>mutable</em> attributes of a component.`,
-        `Why is State "bad"? Because state mutations can be hard to trace, and they're often a vector for bugs.`,
+        `Avoid redundant state, because they introduce multiple <strong>sources of truth</strong>.
+          Example: Form elements that aren't bound to internal app state.`,
       ],
       img: ReactDiagramImg,
     },
     {
-      title: 'Declarative vs. Imperative Programming',
-      gistIds: ['48c82d17edf3eac215049905636051db', 'ed1f1a47369e353ce1a11364298b3024'],
+      title: 'Detour: Declarative vs. Imperative Programming',
+      bullets: [
+        `<strong>Declarative</strong> code describes <em>what</em> you want,
+          rather than <em>how</em> you want it. (Example: SQL, D3.js)`,
+        `Related: <strong>Functional programming</strong> builds a result by composing
+          together pure functions. (Example: RxJS, many ES6 built-ins)`,
+        'Both have taken over JS-land, <em>particularly</em> in the React community.',
+      ],
+    },
+    {
+      title: 'An example: Lunch Grouper',
+      bullets: [
+        'Each computational step is a <strong>pure function</strong>—it takes an input and returns an output.',
+        'There are <strong>no side effects</strong> at any stage.',
+      ],
+      gistIds: ['a1e5b36a1f45b8039938476beb3ffb86'],
+    },
+    {
+      title: 'JSX: The declarative markup language for your dynamic JS apps.',
+      content: `You don't <em>have</em> to use JSX. But in practice, everyone does.`,
+      bullets: [
+        `It's a templating language with an emphasis on Javascript.`,
+        `It's embedded in the JS component itself.`,
+        `Difference from Angular templates: More powerful and flexible. Angular templates are scoped.`,
+      ],
     },
     {
       title: 'React Components: Lifecycle',
-      content: 'tbd'
+      content: 'Components have a view lifecycle.',
+      img: ReactDiagramImg,
     },
     {
       title: `Building a stateless React component`,
       subtitle: `Medium's "Applause" button`,
-      content: 'Also known as a "dumb" or "presentational" component.',
+      img: ApplauseWidgetDiagram,
       type: 'title',
     },
   ],

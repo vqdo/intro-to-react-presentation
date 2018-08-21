@@ -2,7 +2,6 @@ class PresentationStore {
   private listeners = {};
 
   public getApplauseCount(id: string): number {
-    console.log('getting', id, +(localStorage.getItem(this.key(id)) || 0));
     return +(localStorage.getItem(this.key(id)) || 0);
   }
 
